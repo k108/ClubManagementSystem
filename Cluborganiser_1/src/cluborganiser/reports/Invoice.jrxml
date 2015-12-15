@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="16188774-adb6-4d48-bc67-fccc84e57865">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     invoice.`Invoice_Number` AS invoice_Invoice_Number,
+     invoice.`Invoice_Date` AS invoice_Invoice_Date,
+     invoice.`Membership_Id` AS invoice_Membership_Id,
+     invoice.`Total_Fees` AS invoice_Total_Fees
+FROM
+     `invoice` invoice]]>
+	</queryString>
+	<field name="invoice_Invoice_Number" class="java.lang.Integer"/>
+	<field name="invoice_Invoice_Date" class="java.sql.Date"/>
+	<field name="invoice_Membership_Id" class="java.lang.Integer"/>
+	<field name="invoice_Total_Fees" class="java.lang.Double"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="03b96db2-d7c9-4d51-9df9-fb2469cfa683" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="68f32830-087a-4265-8d44-aa7ca4bc91bb" x="20" y="20" width="234" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Invoice]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement uuid="4813421b-7a0d-4b2b-b7de-bfd523e7cf41" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+			</line>
+			<staticText>
+				<reportElement uuid="1c05d74b-8e2f-4b96-aaef-be24ab645a64" mode="Opaque" x="0" y="0" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[InvoiceNumber]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="89aa4441-8423-4c4f-996f-761a28e25003" mode="Opaque" x="138" y="0" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[InvoiceDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1cbbf29b-fca0-4381-8beb-f87793446888" mode="Opaque" x="276" y="0" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MembershipId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="46c9fa43-6f2e-4e38-8058-9d8d5954cdca" mode="Opaque" x="414" y="0" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TotalFees]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement uuid="5390ed29-81c4-4b7f-9b17-8ebe89a6d3e8" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="64adf683-31b1-4e9f-9a8c-9bef54df9120" x="0" y="0" width="138" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_Invoice_Number}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="0bb4ebf2-cca6-436f-ad41-87cdeac1221b" x="138" y="0" width="138" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_Invoice_Date}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="0686f8b9-ef03-4ff4-8d99-eff40db3db1c" x="276" y="0" width="138" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_Membership_Id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="f0fc7c7f-664c-4754-a9b5-dee385397c24" x="414" y="0" width="138" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_Total_Fees}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement uuid="7e14bb85-e8f7-4474-aeff-454d3efbc4a2" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="8c5ab5fe-274e-4802-a7de-f7c4361d3d75" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="9eafaaeb-5a5f-4e6e-9c61-ef409d66517d" x="0" y="4" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

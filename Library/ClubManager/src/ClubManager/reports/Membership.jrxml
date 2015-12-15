@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="27bae552-af14-4198-bc4e-18ebe9c56d69">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     memberships.`Membership_Type_Id` AS memberships_Membership_Type_Id,
+     memberships.`Sport_Type_Id` AS memberships_Sport_Type_Id,
+     memberships.`Membership_Id` AS memberships_Membership_Id,
+     memberships.`Member_Id` AS memberships_Member_Id
+FROM
+     `memberships` memberships]]>
+	</queryString>
+	<field name="memberships_Membership_Type_Id" class="java.lang.Integer"/>
+	<field name="memberships_Sport_Type_Id" class="java.lang.Integer"/>
+	<field name="memberships_Membership_Id" class="java.lang.Integer"/>
+	<field name="memberships_Member_Id" class="java.lang.Integer"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="55b56a91-0676-4510-b016-12f590a190fe" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="c537ca9b-96b6-4c9b-ab58-1a763a975bb4" x="20" y="20" width="234" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Membership Report]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement uuid="c7a77a99-86db-42cd-b3dc-f6cf30ee8336" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+			</line>
+			<staticText>
+				<reportElement uuid="dbaeba67-139e-4e32-af8f-146293fb4d96" mode="Opaque" x="0" y="0" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MembershipTypeId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="19563088-bdc1-4493-a658-779e8bfceb6e" mode="Opaque" x="138" y="0" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SportTypeId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="36eeda72-1fee-4b48-bf0e-6594be352ccf" mode="Opaque" x="276" y="0" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MembershipId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cff4ff3e-ba33-4ec9-8526-3d671c99144a" mode="Opaque" x="414" y="0" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MemberId]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement uuid="d8662fb5-a129-47f0-9a12-014481332c51" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="63b78e31-666d-414e-bba6-2e5244bf5632" x="0" y="0" width="138" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{memberships_Membership_Type_Id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="b91ef82b-49cf-4964-8029-e91e1fe9c27c" x="138" y="0" width="138" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{memberships_Sport_Type_Id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="3f91afec-58d1-4a9f-bec0-7aa02fa8dc2b" x="276" y="0" width="138" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{memberships_Membership_Id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="59c6cf89-cb09-427d-bdc4-ece0e5a4bc16" x="414" y="0" width="138" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{memberships_Member_Id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement uuid="7bd364f7-77c1-48e5-895b-98d43ad3e061" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="8f879b75-3165-422c-91ae-dee78aacd927" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="4c19106f-8b7b-44f8-8972-e92a5cfde71a" x="0" y="4" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
